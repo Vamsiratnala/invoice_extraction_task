@@ -92,64 +92,6 @@ def run_extraction_pipeline(file_path: str):
     return structured_invoice
 
 
-# -------------------------
-# Run if main
-# -------------------------
 if __name__ == "__main__":
-    run_extraction_pipeline("IMG_7142.jpeg")  # Change file as needed
+    run_extraction_pipeline("IMG_7142.jpeg")  
 
-"""
-{
-    "VendorDetails": {
-        "Name": "Borcele Bank",
-        "Address": "123 Anywhere St., Any City"
-    },
-    "InvoiceNumber": "01234",
-    "InvoiceDate": "11.02.2030",
-    "DueDate": "11.03.2030",
-    "TotalAmount": 440,
-    "LineItems": [
-        {
-            "Description": "Brand consultation",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        },
-        {
-            "Description": "logo design",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        },
-        {
-            "Description": "Website design",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        },
-        {
-            "Description": "Social media templates",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        },
-        {
-            "Description": "Brand photography",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        },
-        {
-            "Description": "Brand guide",
-            "UnitPrice": 100,
-            "Quantity": 1,
-            "Total": 100
-        }
-    ],
-    "TaxDetails": {
-        "TaxRate": 10,
-        "TaxAmount": 40
-    },
-    "PaymentTerms": "SUBTOTAL $400.00, Tax 10%, TOTAL $440.00"
-}
-"""
