@@ -23,7 +23,7 @@ def check_compliance(data: dict) -> dict:
 
     # 2. Quantity format
     qty = data.get("Quantity", "")
-    valid_units = ["Set", "Pair", "Unit", "Pieces", "Pcs"]
+    valid_units = ["Set", "Pair", "Unit", "Pieces", "Pcs","Number"]
     if qty:
         match = re.match(r"^\s*(\d+)\s*([A-Za-z]+)\s*$", qty)
         if not match:
@@ -41,7 +41,7 @@ def check_compliance(data: dict) -> dict:
         lines = [line.strip() for line in re.split(r"[,|\n]", Address) if line.strip()]
         if len(lines) < 2:
             report["errors"].append("Address must have at least 2 lines")
-        if not re.search(r"\b\d{6}\b", Address):  # Indian pincode format
+        if not re.search(r"\b\d{3}\s?\d{3}\b", Address): 
             report["errors"].append("Address must contain a valid pincode")
 
     # Final status
@@ -55,3 +55,4 @@ invoice_data = {'Product Code': '', 'Product Name / Type': 'Neck Tie', 'Quantity
 result = check_compliance(invoice_data)
 
 print(result)
+
