@@ -32,3 +32,20 @@ Aditya BiRLA FASHON 81909021/583009 Month & Year of Manufacture. 04/2025 Style R
  
 ✅final output :
  ✅Clothing Tag OCR & Compliance Checker result: {'Product Code': 'RNPC524983222', 'Product Name / Type': 'Tie', 'Quantity': '1 Set', 'Address': 'KH No; 118/110/1 , Building 2 , 8wyustea HAL APenRoadis , Road Yemalur Post, Bengaluru Karnataka 560 037', 'MRP': '3999.00', 'status': 'PASS', 'errors': []}
+
+
+
+✅ Extracted Raw Text from Image: poiye Dia Ledd= KH No.118/110/1, Building 2, 0ff HAL Airport Road_ Divyasree Technopolis, Yemalur Post; Bengaluru Karnataka 560 037 Toll Free Number. 1800 425 3050 E-mail-customerservice@abfrl adityabirla com 701j08905838957064(21)0170 Aduadial A F45o 84905514715261 Month 8 Year of Manufacture 042025 Style PeBSMaGPX79888 25 Store Reference M Waist Size 80 cm Outseam Length 42cm Product BOXER SHORTS Net Quantity 1 Number Maximum Retail Price < 699.00 Inclusive of all Taxce Aditya Hirla Litctyle Brand: Limited: KA No T8110n. Building 2 , Oi HAL Aipon Road Divyastee Yecopolis Yemalyr Post; Bengaluru Kamataka 580 037 . For Customner Complaints Contadt Cuslomer Cale Exequu/e Der Aditya Biria Liesty e Branos Lmited Kh No 1184110n1, Buinng 2, On HAL Airport Road Tecnnopo : Yenalu Poel Divyasiee Bengaluru Kamalata 860 037 Toll Fiee Numbe: 1800 425 3050 E-mai customerservice@abfLadityabirla com com
+
+✅ Extracted Invoice JSON:
+{'Product Code or style': 'PeBSMaGPX79888', 'Product Name / Type': 'BOXER SHORTS', 'Quantity': '1 Number', 'Address': 'KH No.118/110/1, Building 2, Off HAL Airport Road, Divyasree Technopolis, Yemalur Post; Bengaluru Karnataka 560 037', 'MRP': 699.0}
+<class 'dict'>
+{'Product Code or style': 'PeBSMaGPX79888',
+ 'Product Name / Type': 'BOXER SHORTS',
+ 'Quantity': '1 Number',
+ 'Address': 'KH No.118/110/1, Building 2, Off HAL Airport Road, Divyasree Technopolis, Yemalur Post; Bengaluru Karnataka 560 037',
+ 'MRP': 699.0}
+
+ 
+✅final output :
+ Clothing Tag OCR & Compliance Checker result: {'Product Code': 'PeBSMaGPX79888', 'Product Name / Type': 'BOXER SHORTS', 'Quantity': '1 Number', 'Address': 'KH No.118/110/1, Building 2, Off HAL Airport Road, Divyasree Technopolis, Yemalur Post; Bengaluru Karnataka 560 037', 'MRP': 699.0, 'status': 'PASS', 'errors': []}
