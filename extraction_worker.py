@@ -1,18 +1,24 @@
 
 import os
+import re
+import json
+
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 
-import pytesseract
+
+#import pytesseract
 from PIL import Image,ImageOps
 
+import easyocr
+import cv2
 
-import re
-import json
+
+
 
 # Point directly to the installed binary
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+#pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 # Load environment variables
@@ -25,6 +31,8 @@ class ExtractionWorker:
         # Initialize Groq LLM
         self.llm = ChatGroq(groq_api_key=groq_api_key, model=model)
 
+        self.reader = easyocr.Reader(['en'])  # Initialize once
+
         # Prompt template for extraction
         self.prompt = ChatPromptTemplate.from_template(
     """
@@ -35,7 +43,7 @@ class ExtractionWorker:
    - **Product Name / Type** (e.g., "Neck Tie", "BOTTOM")
    - **Quantity** (e.g., "1 Set", "1 Unit")
    - **Address** (manufacturer/distributor address)
-   - **MRP** (optional)
+   - **MRP** 
 
     Your response must be ONLY a valid JSON object containing all extracted fields.
     Do not include any explanation, heading, or extra text.
@@ -46,20 +54,24 @@ class ExtractionWorker:
     """
 )
 
-
+    
     def extract_text_from_image(self, image_path: str) -> str:
-        """Extract text from images using Tesseract OCR."""
-        image = Image.open(image_path)
-        image = ImageOps.exif_transpose(image)   # Correct orientation using EXIF data
-        text = pytesseract.image_to_string(image)
-        print("✅ Extracted Raw Text from Image:")
-        print(text)
-        return text.strip()
+        """Extract text from images using easy OCR."""
+        img = cv2.imread(image_path) 
+    
+        if img is None:
+            print(f"Error: Unable to load image from {image_path}")
+        else:
+        # Now use the loaded image with easyocr
+            result = self.reader.readtext(img) 
+            extracted_text = " ".join([res[1] for res in result])
+            print("✅ Extracted Raw Text from Image:", extracted_text)
+            return extracted_text
 
     def extract_invoice(self, text: str) -> str:
         
         chain = self.prompt | self.llm
-        result = chain.invoke({"text": text})
+        result = chain.invoke({"text": text})  # output from LLM 
         
         #using regex to extract JSON object from the response
 
@@ -92,6 +104,9 @@ def run_extraction_pipeline(file_path: str):
     return structured_invoice
 
 
+# -------------------------
+# Run if main
+# -------------------------
 if __name__ == "__main__":
-    run_extraction_pipeline("IMG_7142.jpeg")  
+    run_extraction_pipeline("IMG_7142.jpeg")  # Change file as needed
 
