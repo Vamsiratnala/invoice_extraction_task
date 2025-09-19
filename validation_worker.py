@@ -1,7 +1,4 @@
 import re
-from datetime import datetime
-
-
 
 def check_compliance(data: dict) -> dict:
     """
@@ -56,4 +53,5 @@ def check_compliance(data: dict) -> dict:
 
 invoice_data = {'Product Code': '', 'Product Name / Type': 'Neck Tie', 'Quantity': '1 Set', 'Address': 'Aditya Birla Lifestyle Brands Limited. on + 118/110/1, Building 2, 4 tan Ay Mes Yemalur Post, Bengaluru,Karnataka - 560 037.', 'MRP': 3999.0}
 result = check_compliance(invoice_data)
+
 print(result)
