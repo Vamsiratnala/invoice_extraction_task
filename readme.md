@@ -1,78 +1,34 @@
-✅ Extracted Raw Text from Image1:
-MASABA
-
-PRODUCT: BOTTOM
-(ET) mawass0aa2
-BZEGSE WAIST SIZE: Xt 860m
-reyes COLOR : BLUE
-
-9800000136806 (Inc. of Taxes)
-NET QTY; 1 Unit
-
-✅Extracted Invoice JSON:
-
-{'Product Code': 'mawass0aa2', 'Product Name / Type': 'BOTTOM', 'Quantity': '1 Unit', 'Address': '', 'MRP': ''}
-
-✅final output :
-✅Clothing Tag OCR & Compliance Checker result: 
-{'Product Code': 'mawass0aa2',
- 'Product Name / Type': 'BOTTOM',
-  'Quantity': '1 Unit',
-   'Address': '', 'MRP': '',
-    'status': 'FAIL',
-     'errors': ['Address must have at least 2 lines', 'Invalid Address']}
-
-
-
-✅ Extracted Raw Text from Image2:
-in & AK. pak emer 04/2025
-Style
-
-Tie Length ease " m
-Pocket Square Length 33cm
-Pocket Square Width 33cm
-
-Net Quantity 1 Set
-
-Contents Neck Tie 1 Number +
-Pocket Square 1 Number
-+ Cufflink 1 Pair
-Maximum Retail Price
-
-< 3999.00
-
-Inclusive of all Taxes
-Aditya Birla Lifestyle Brands Limited.
-on + 118/110/1, Building 2,
-
-4 tan Ay Mes Yemalur Post,
-
-Bengaluru,Karnataka - 560 037.
-
-For Customer Complaints
-Contact: Customer Care Executive *
-Aditya Birla Lifestyle Brands Limited.
-
-KH No.118/110/1, Building 2,
-Off HAL Airport Road,
-Divyasree Technopolis, Yemalur Post,
-Bengaluru,Karnataka - 560 037.
-Toll Free Number. 1800 425 3050
-E-mail - customerservice@abfri.adityabirla. i
-
-0 0.0 00
-
-1)0890 0
-
+✅ Extracted Raw Text from Image: MASABA PROOuct BOTTOM MAW25304B2 WAIST Size XL 88cm COLOR BLUE MRP 30000.,00 9800000138886 (Inc of Taxes) NET QTY : 1 Uni Country ot origin: India Manutactured, packed & distributed by: House of Masaba Lifestyle Pvt Ltd, Plot no. 80,89, Marol Co-operative Industrial Estate Rd, Marol, Andheri East, Mumbai 400059 For customer complaints please contact: +91 7738007478 shop@houseofmasaba com  House of Masaba Lifestyle Pvt Ltd, Plot no. 80,89, Marol Co-operative Industrial Estate Rd, Marol, Andheri East, Mumbai 400059
 
 ✅ Extracted Invoice JSON:
-{'Product Code': '', 'Product Name / Type': 'Neck Tie', 'Quantity': '1 Set', 'Address': 'Aditya Birla Lifestyle Brands Limited. on + 118/110/1, Building 2, 4 tan Ay Mes Yemalur Post, Bengaluru,Karnataka - 560 037.', 'MRP': 3999.0}
 
-✅final output : 
+<class 'dict'>
+
+{'Product Code': 'MAW25304B2',
+ 'Product Name / Type': 'BOTTOM',
+ 'Quantity': '1 Unit',
+ 'Address': 'House of Masaba Lifestyle Pvt Ltd, Plot no. 80,89, Marol Co-operative Industrial Estate Rd, Marol, Andheri East, Mumbai 400059',
+ 'MRP': '30000.00'}
+
+
+
+✅final output :
 Clothing Tag OCR & Compliance Checker result: 
-{'Product Code': '', 
-'Product Name / Type': 'Neck Tie,Pocket Square,Cufflink',
- 'Quantity': '1 Set', 'Address': 'on + 118/110/1, Building 2,4 tan Ay Mes Yemalur Post,Bengaluru,Karnataka - 560 037.',
-  'MRP': '3999.00', 
-  'status': 'FAIL',
-   'errors': ['Missing Product Code', 'Address must contain a valid pincode']}
+{'Product Code': 'MAW25304B2', 'Product Name / Type': 'BOTTOM', 'Quantity': '1 Unit', 'Address': 'House of Masaba Lifestyle Pvt Ltd, Plot no. 80,89, Marol Co-operative Industrial Estate Rd, Marol, Andheri East, Mumbai 400059', 'MRP': '30000.00', 'status': 'PASS', 'errors': []}
+
+
+
+✅ Extracted Raw Text from Image:
+Aditya BiRLA FASHON 81909021/583009 Month & Year of Manufacture. 04/2025 Style RNPC524983222 Tie Length 1.47 m Pocket Square Length 33 cm Pocket Square Width 33 cm Net Quantity 1 Set Contents Neck Tie 1 Number Pocket Square 1 Number Cufflink 1 Palr Maximum Retail Price < 3999.00 Inclusive of all Taxes Aditya Birla Lifcstyle Brands Limited. KH No; 118/110/1 , Building 2 , 8wyustea HAL APenRoadis , Road Yemalur Post, Bengaluru Karnataka 560 037 For Customer Complalnts Contact: Customer Care Executive Aditya Birla Lifestyle Brands Limited. KH No.118/110/1 , Building 2, Off HAL Airport Road, Divyasree Technopolis, Yemalur Post; Bengaluru,Karnataka 560 037 Toll Free Number. 1800 425 3050 E-mail customerservice@abfrl adityabirla com "'(81983909021533009 (21)2054
+
+✅ Extracted Invoice JSON:
+<class 'dict'>
+{'Product Code': 'RNPC524983222',
+ 'Product Name / Type': 'Tie',
+ 'Quantity': '1 Set',
+ 'Address': 'KH No; 118/110/1 , Building 2 , 8wyustea HAL APenRoadis , Road Yemalur Post, Bengaluru Karnataka 560 037',
+ 'MRP': '3999.00'}
+
+ 
+✅final output :
+ ✅Clothing Tag OCR & Compliance Checker result: {'Product Code': 'RNPC524983222', 'Product Name / Type': 'Tie', 'Quantity': '1 Set', 'Address': 'KH No; 118/110/1 , Building 2 , 8wyustea HAL APenRoadis , Road Yemalur Post, Bengaluru Karnataka 560 037', 'MRP': '3999.00', 'status': 'PASS', 'errors': []}
